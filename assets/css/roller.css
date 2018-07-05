@@ -1,0 +1,69 @@
+body {
+    background-color: #BBBBBB;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+div {
+    margin: 5px auto;
+}
+
+input[type="number"] {
+    display: block;
+    margin: 25px auto;
+    width: 60%;
+}
+
+button {
+    width: 32%;
+    margin: 0 5px;
+    display: block;
+}
+
+.page-header {
+    margin: 0 auto;
+    padding: 2px;
+    background-color: cornsilk;
+}
+
+.subtext {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.panel {
+    margin: 0 auto;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.panel-heading {
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+.panel-body {
+    font-weight: 700;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+.inputbox {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
