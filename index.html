@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ron's Dice Roller</title>
+    <!-- Link Bootstrap 3.3.7, Font Awesome 5.1.0 & Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/roller.css">
+</head>
+
+<body>
+
+    <div class="page-header">
+        <h1>Ron's Dice Roller</h1>
+        <p class="subtext">--- Take your chances ---</p>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Your rolls:</div>
+        <div class="panel-body" id="rolls">
+            Rolls will go here
+        </div>
+    </div>
+
+    <div class="container">
+        <input type="number" min="1" id="num" placeholder="Enter # of dice to roll">
+        <section>
+            <div class="btn-group">
+                <button id="D2" class="btn btn-default btn-sm">D2</button>
+                <button id="D3" class="btn btn-default btn-sm">D3</button>
+                <button id="D4" class="btn btn-default btn-sm">D4</button>
+            </div>
+        </section>
+        <section>
+            <div class="btn-group">
+                <button id="D6" class="btn btn-default btn-sm">D6</button>
+                <button id="D8" class="btn btn-default btn-sm">D8</button>
+                <button id="D10" class="btn btn-default btn-sm">D10</button>
+            </div>
+        </section>
+        <section>
+            <div class="btn-group">
+                <button id="D12" class="btn btn-default btn-sm">D12</button>
+                <button id="D20" class="btn btn-default btn-sm">D20</button>
+                <button id="D100" class="btn btn-default btn-sm">D100</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script type="text/javascript" src="assets/js/roller.js"></script>
+
+</body>
+
+</html>
