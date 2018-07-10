@@ -22,264 +22,74 @@ var rolls = [];
 //Set up return string
 var str = "";
 
+//Set up var to hold the roll
+var roll = 0;
 
 //Set up rolls:
 
 //D2
-d2Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 2) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d2Button.addEventListener("click", rolling); {
+    rolling(2);
+};
 
 //D3
-d3Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 3) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d3Button.addEventListener("click", rolling); {
+    rolling(3);
+};
 
 //D4
-d4Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 4) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d4Button.addEventListener("click", rolling); {
+    rolling(4);
+};
 
 //D6
-d6Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 6) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d6Button.addEventListener("click", rolling); {
+    rolling(6);
+};
 
 //D8
-d8Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 8) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d8Button.addEventListener("click", rolling); {
+    rolling(8);
+};
 
 //D10
-d10Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 10) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d10Button.addEventListener("click", rolling); {
+    rolling(10);
+};
 
 //D12
-d12Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 12) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d12Button.addEventListener("click", rolling); {
+    rolling(12);
+};
 
 //D20
-d20Button.addEventListener("click", function() {
-    // Check for no number entered, clear the text and add a warning
-    if (readNum.value == "" || readNum.value == 0) {
-        rollsDisplay.textContent = "";
-        rollsDisplay.textContent = "Enter an amount of dice to roll"
-    }   else    {
-    // Store the number entered
-        numDice = readNum.value;
-
-        //Set up a singular or plural suffix for rolls statement
-        var suff = "";
-        if (numDice === "1") {
-            suff = " was rolled and you rolled: ";
-        } else {
-            suff = " were rolled and you rolled: ";
-        }
-
-        //Start the string with how many and what type of dice was rolled 
-        str = numDice + " " + this.id + suff;
-
-        //Roll the dice (Math.random the number after * is the max number hat will be seen)
-        for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 20) + 1); + " ";
-        }
-
-        //Display the rolls
-        rollsDisplay.textContent = str;
-    }
-});
+d20Button.addEventListener("click", rolling); {
+    rolling(20);
+};
 
 //D100
-d100Button.addEventListener("click", function() {
+d100Button.addEventListener("click", rolling); {
+    rolling(100);
+};
+
+///////// FUNCTIONS /////////
+
+function rolling () {
+    //Set up var to hold the sum
+    var sum = 0;
+
     // Check for no number entered, clear the text and add a warning
     if (readNum.value == "" || readNum.value == 0) {
         rollsDisplay.textContent = "";
         rollsDisplay.textContent = "Enter an amount of dice to roll"
     }   else    {
+
+    //Set up sides of the die
+        var sides = this.id;
+        sides = sides.split("");
+        sides = sides.splice(1,sides.length).join("");
+        sides = Number(sides);
+
     // Store the number entered
         numDice = readNum.value;
 
@@ -291,15 +101,19 @@ d100Button.addEventListener("click", function() {
             suff = " were rolled and you rolled: ";
         }
 
-        //Start the string with how many and what type of dice was rolled 
+        //Start the string with how many and what type of dice was rolled
         str = numDice + " " + this.id + suff;
 
         //Roll the dice (Math.random the number after * is the max number hat will be seen)
         for (var i=1; i<=numDice; i++) {
-            str += " " + Math.floor((Math.random() * 100) + 1); + " ";
+            roll = Math.floor((Math.random() * sides) + 1);
+            str += " " + roll + " ";
+            sum += roll;
         }
+
+        str = str + "-- and your total was " + sum;
 
         //Display the rolls
         rollsDisplay.textContent = str;
     }
-});
+}
